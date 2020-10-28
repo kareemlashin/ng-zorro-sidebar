@@ -1,0 +1,168 @@
+<nz-layout class="app-layout" dir="rtl">
+    <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" [ngClass]="{'open': open}" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+        <div class="sidebar-logo">
+            <a href="https://ng.ant.design/" target="_blank">
+                <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+                <h1>Ant Design Of Angular</h1>
+
+            </a>
+        </div>
+        <button (click)="xl()">text</button>
+
+        <ul nz-menu nzTheme="light" nzMode="inline" [nzInlineCollapsed]="isCollapsed" [nzInlineCollapsed]="isCollapsed">
+                <li nz-menu-item nz-tooltip nzTooltipPlacement="right" [nzTooltipTitle]="isCollapsed ? 'Navigation One' : ''" >
+<i nz-icon nzType="up" nzTheme="outline" class=" pr-5"></i>
+
+          <span>Navigation 222</span>
+
+
+    </li>
+           <li nz-menu-item nz-tooltip nzTooltipPlacement="right" [nzTooltipTitle]="isCollapsed ? 'Navigation One' : ''" >
+<i nz-icon nzType="up" nzTheme="outline" class=" pr-5"></i>
+
+          <span>Navigation 222</span>
+
+
+    </li>
+           <li nz-menu-item nz-tooltip nzTooltipPlacement="right" [nzTooltipTitle]="isCollapsed ? 'Navigation One' : ''" >
+<i nz-icon nzType="up" nzTheme="outline" class=" pr-5"></i>
+
+          <span>Navigation 222</span>
+
+
+    </li>
+           <li nz-menu-item nz-tooltip nzTooltipPlacement="right" [nzTooltipTitle]="isCollapsed ? 'Navigation One' : ''" >
+<i nz-icon nzType="up" nzTheme="outline" class=" pr-5"></i>
+          <span>Navigation 222</span>
+
+
+    </li>
+           <li nz-menu-item nz-tooltip nzTooltipPlacement="right" [nzTooltipTitle]="isCollapsed ? 'Navigation One' : ''" >
+<i nz-icon nzType="up" nzTheme="outline" class=" pr-5"></i>
+<i nz-icon nzType="close" nzTheme="outline"></i>
+          <span>Navigation 222</span>
+
+
+    </li>
+    
+            <li nz-menu-item >
+<i nz-icon nzType="pic-center" nzTheme="outline" class=" pr-5"></i>
+                <span>Navigation One</span>
+            </li>
+            <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+                <ul style="text-align: right;">
+                    <li nz-menu-item nzMatchRouter>
+                        <a routerLink="/welcome">one</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>two</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>three</a>
+                    </li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="kareem" nzIcon="question">
+                <ul style="text-align: right;">
+                    <li nz-menu-item nzMatchRouter>
+                        <a routerLink="/welcome">one</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>two</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>three</a>
+                    </li>
+                </ul>
+            </li>
+            <li nz-submenu nzIcon="form">
+                <ul>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Basic Form</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nz-sider>
+    <nz-layout>
+        <nz-header>
+            <div class="app-header">
+                <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+            <i class="trigger"
+               nz-icon
+               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            ></i>
+        </span>
+                <button (click)="al()">text</button>
+            </div>
+        </nz-header>
+        <nz-content>
+            <div class="inner-content px-5">
+                <router-outlet></router-outlet>
+                    <nz-checkbox-wrapper style="width: 100%;" >
+      <div nz-row>
+        <div nz-col nzSpan="8"><label nz-checkbox nzValue="A" [ngModel]="true">A</label></div>
+        <div nz-col nzSpan="8"><label nz-checkbox nzValue="B">B</label></div>
+        <div nz-col nzSpan="8"><label nz-checkbox nzValue="C">C</label></div>
+        <div nz-col nzSpan="8"><label nz-checkbox nzValue="D">D</label></div>
+        <div nz-col nzSpan="8"><label nz-checkbox nzValue="E">E</label></div>
+      </div>
+      
+    </nz-checkbox-wrapper>
+  
+    <nz-date-picker [nzRenderExtraFooter]="footerRender"></nz-date-picker>
+    <nz-radio-group [(ngModel)]="radioValue">
+      <label nz-radio [nzValue]="o.value" *ngFor="let o of options">{{ o.label }}</label>
+    </nz-radio-group>
+    <nz-radio-group [(ngModel)]="radioValue">
+      <label nz-radio [nzValue]="o.value" *ngFor="let o of options">{{ o.label }}</label>
+    </nz-radio-group>
+    <nz-radio-group [(ngModel)]="radioValue">
+      <label nz-radio [nzValue]="o.value" *ngFor="let o of options">{{ o.label }}</label>
+    </nz-radio-group>
+
+
+       <nz-radio-group [(ngModel)]="radioValue" nzSize="large">
+      <label nz-radio-button nzValue="A">Hangzhou</label>
+      <label nz-radio-button nzValue="B">Shanghai</label>
+      <label nz-radio-button nzValue="C">Beijing</label>
+      <label nz-radio-button nzValue="D">Chengdu</label>
+    </nz-radio-group>
+    <br />
+    <br />
+    <nz-radio-group [(ngModel)]="radioValue">
+      <label nz-radio-button nzValue="A">Hangzhou</label>
+      <label nz-radio-button nzValue="B">Shanghai</label>
+      <label nz-radio-button nzValue="C">Beijing</label>
+      <label nz-radio-button nzValue="D">Chengdu</label>
+    </nz-radio-group>
+    <br />
+    <br />
+    <nz-radio-group [(ngModel)]="radioValue" nzSize="small">
+      <label nz-radio-button nzValue="A">Hangzhou</label>
+      <label nz-radio-button nzValue="B">Shanghai</label>
+      <label nz-radio-button nzValue="C">Beijing</label>
+      <label nz-radio-button nzValue="D">Chengdu</label>
+    </nz-radio-group>
+        <nz-avatar nzIcon="user"></nz-avatar>
+    <nz-avatar nzText="U"></nz-avatar>
+    <nz-avatar nzText="USER"></nz-avatar>
+    <nz-avatar nzIcon="user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+    <nz-avatar nzText="U" style="color:#f56a00; background-color:#fde3cf;"></nz-avatar>
+    <nz-avatar nzIcon="user" style="background-color:#87d068;"></nz-avatar>
+     <div>
+      <nz-avatar [nzSize]="64" nzIcon="user"></nz-avatar>
+      <nz-avatar nzSize="large" nzIcon="user"></nz-avatar>
+      <nz-avatar nzIcon="user"></nz-avatar>
+      <nz-avatar nzSize="small" nzIcon="user"></nz-avatar>
+    </div>
+    <div>
+      <nz-avatar [nzShape]="'square'" [nzSize]="64" [nzIcon]="'user'"></nz-avatar>
+      <nz-avatar [nzShape]="'square'" [nzSize]="'large'" [nzIcon]="'user'"></nz-avatar>
+      <nz-avatar [nzShape]="'square'" [nzIcon]="'user'"></nz-avatar>
+      <nz-avatar [nzShape]="'square'" [nzSize]="'small'" [nzIcon]="'user'"></nz-avatar>
+    </div>
+            </div>
+        </nz-content>
+    </nz-layout>
+</nz-layout>
